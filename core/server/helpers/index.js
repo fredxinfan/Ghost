@@ -39,6 +39,7 @@ coreHelpers.url = require('./url');
 coreHelpers.image = require('./image');
 coreHelpers.prev_post = require('./prev_next');
 coreHelpers.next_post = require('./prev_next');
+coreHelpers.partial = require('./partial');
 
 coreHelpers.helperMissing = function (arg) {
     if (arguments.length === 2) {
@@ -103,6 +104,7 @@ registerHelpers = function (adminHbs) {
     registerThemeHelper('plural', coreHelpers.plural);
     registerThemeHelper('url', coreHelpers.url);
     registerThemeHelper('image', coreHelpers.image);
+    registerThemeHelper('partial', coreHelpers.partial);
 
     // Async theme helpers
     registerAsyncThemeHelper('body_class', coreHelpers.body_class);
